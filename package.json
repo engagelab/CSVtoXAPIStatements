@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "csv-parse": "^4.15.3"
+  },
+  "devDependencies": {}
+}
