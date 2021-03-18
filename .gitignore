@@ -1,2 +1,3 @@
 data/csvData.csv
 node_modules/
+.env
