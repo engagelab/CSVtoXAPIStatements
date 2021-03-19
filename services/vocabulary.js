@@ -34,31 +34,35 @@ const validVerbs = {
 const activityDictionay = {
   0: {
     id: "http://adlnet.gov/expapi/activities/course",
-    display: {
+    /*  displays: {
       "en-UD": "course",
       NO: "kurs",
-    },
+    }, */
+    objectType: "Activity",
   },
   1: {
     id: "hhttp://adlnet.gov/expapi/activities/question",
-    display: {
+    /*  displays: {
       "en-UD": "question",
       NO: "spørsmål",
-    },
+    }, */
+    objectType: "Activity",
   },
   2: {
     id: "http://adlnet.gov/expapi/activities/module",
-    display: {
+    /*  displays: {
       "en-UD": "module",
       NO: "modul",
-    },
+    }, */
+    objectType: "Activity",
   },
   3: {
     id: "hhttp://adlnet.gov/expapi/activities/page",
-    display: {
+    /*  displays: {
       "en-UD": "page",
       NO: "side",
-    },
+    }, */
+    objectType: "Activity",
   },
 };
 

@@ -1,16 +1,17 @@
 const parse = require("csv-parse");
 const fs = require("fs");
 const { Statement } = require("../models/Statement");
+const { uploadStatements } = require("../services/learning-locker-api");
 
 /* const verbs = [];
 const activities = []; */
 //Create the parser
-const statements = [];
+let statements;
 const parser = parse({ delimiter: ";" }, (error, data) => {
   if (error) console.log(error);
   else {
     /* console.log(data[0]); */
-
+    statements = [];
     data.forEach((elem, index) => {
       if (index > 0) {
         const array = elem[0].split(",");
@@ -26,7 +27,8 @@ const parser = parse({ delimiter: ";" }, (error, data) => {
 });
 
 parser.on("end", () => {
-  console.log("Ended");
+  console.log("Uploading Statements");
+  uploadStatements(statements);
 });
 
 /**

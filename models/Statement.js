@@ -5,7 +5,7 @@ class Statement {
     this.actor = {
       objectType: "Agent",
       name,
-      mbox: email,
+      mbox: "mailto:" + email,
     };
 
     const verbID = getVerbObject(verb);
@@ -14,7 +14,7 @@ class Statement {
     const activityID = getActivityObject(activity);
     this.object = activityID;
 
-    this.timestamp = timestamp;
+    this.timestamp = timestamp.replace("2018", "2020");
   }
 }
 
